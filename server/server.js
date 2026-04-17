@@ -18,7 +18,7 @@ app.use(
 app.use(express.json());
 
 // Enhanced Connection Logic
-const dbURI = process.env.MONGODB_URI;
+const dbURI = process.env.DATABASE_URL || process.env.MONGODB_URI;
 
 if (!dbURI) {
   console.error("ERROR: MONGO_URI is not defined in your .env file!");
