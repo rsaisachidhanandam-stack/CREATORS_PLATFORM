@@ -5,7 +5,11 @@
     "client": "npm run dev --prefix client",
     "server": "npm run dev --prefix server",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "start": "node server/server.js",
     "install-all": "npm install && npm install --prefix client && npm install --prefix server"
+  },
+  "engines": {
+    "node": ">=20.0.0"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"
